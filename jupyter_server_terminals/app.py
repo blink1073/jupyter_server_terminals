@@ -3,7 +3,6 @@ import sys
 from shutil import which
 
 from jupyter_server.extension.application import ExtensionApp
-
 from traitlets import Type
 
 from . import api_handlers
@@ -16,11 +15,8 @@ class TerminalsExtensionApp(ExtensionApp):
     name = "jupyter_server_terminals"
 
     terminal_manager_class = Type(
-        default_value=TerminalManager,
-        help="The terminal manager class to use."
-    ).tag(
-        config=True
-    )
+        default_value=TerminalManager, help="The terminal manager class to use."
+    ).tag(config=True)
 
     def initialize_settings(self):
         self.initialize_configurables()
@@ -31,7 +27,9 @@ class TerminalsExtensionApp(ExtensionApp):
         else:
             default_shell = which("sh")
         shell_override = self.serverapp.terminado_settings.get("shell_command")
-        shell = [os.environ.get("SHELL") or default_shell] if shell_override is None else shell_override
+        shell = (
+            [os.environ.get("SHELL") or default_shell] if shell_override is None else shell_override
+        )
         # When the notebook server is not running in a terminal (e.g. when
         # it's launched by a JupyterHub spawner), it's likely that the user
         # environment hasn't been fully set up. In that case, run a login
@@ -55,7 +53,7 @@ class TerminalsExtensionApp(ExtensionApp):
             (
                 r"/terminals/websocket/(\w+)",
                 handlers.TermSocket,
-                {"term_manager": self.terminal_manager}
+                {"term_manager": self.terminal_manager},
             )
         )
         self.handlers.extend(api_handlers.default_handlers)

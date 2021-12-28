@@ -5,7 +5,6 @@ from tornado import web
 
 
 class TerminalRootHandler(APIHandler):
-
     @web.authenticated
     def get(self):
         models = self.terminal_manager.list()
@@ -37,5 +36,5 @@ class TerminalHandler(APIHandler):
 
 default_handlers = [
     (r"/api/terminals", TerminalRootHandler),
-    (r"/api/terminals/(\w+)", TerminalHandler)
+    (r"/api/terminals/(\w+)", TerminalHandler),
 ]
