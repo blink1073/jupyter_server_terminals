@@ -1,10 +1,15 @@
 import json
 
-from jupyter_server.base.handlers import APIHandler
 from tornado import web
 
+try:
+    from jupyter_server.base.handlers import APIHandler
+    from jupyter_server.extension.handler import ExtensionHandlerMixin
+except ModuleNotFoundError:
+    raise ModuleNotFoundError("Jupyter Server must be installed to use this extension.")
 
-class TerminalRootHandler(APIHandler):
+
+class TerminalRootHandler(ExtensionHandlerMixin, APIHandler):
     @web.authenticated
     def get(self):
         models = self.terminal_manager.list()
@@ -19,7 +24,7 @@ class TerminalRootHandler(APIHandler):
         self.finish(json.dumps(model))
 
 
-class TerminalHandler(APIHandler):
+class TerminalHandler(ExtensionHandlerMixin, APIHandler):
     SUPPORTED_METHODS = ("GET", "DELETE")
 
     @web.authenticated

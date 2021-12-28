@@ -2,12 +2,16 @@ import os
 import sys
 from shutil import which
 
-from jupyter_server.extension.application import ExtensionApp
 from traitlets import Type
 
 from . import api_handlers
 from . import handlers
 from .terminalmanager import TerminalManager
+
+try:
+    from jupyter_server.extension.application import ExtensionApp
+except ModuleNotFoundError:
+    raise ModuleNotFoundError("Jupyter Server must be installed to use this extension.")
 
 
 class TerminalsExtensionApp(ExtensionApp):

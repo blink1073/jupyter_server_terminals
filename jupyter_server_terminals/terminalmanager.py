@@ -7,14 +7,18 @@
 from datetime import timedelta
 
 import terminado
-from jupyter_server._tz import isoformat
-from jupyter_server._tz import utcnow
-from jupyter_server.prometheus.metrics import TERMINAL_CURRENTLY_RUNNING_TOTAL
 from tornado import web
 from tornado.ioloop import IOLoop
 from tornado.ioloop import PeriodicCallback
 from traitlets import Integer
 from traitlets.config import LoggingConfigurable
+
+try:
+    from jupyter_server._tz import isoformat
+    from jupyter_server._tz import utcnow
+    from jupyter_server.prometheus.metrics import TERMINAL_CURRENTLY_RUNNING_TOTAL
+except ModuleNotFoundError:
+    raise ModuleNotFoundError("Jupyter Server must be installed to use this extension.")
 
 
 class TerminalManager(LoggingConfigurable, terminado.NamedTermManager):
