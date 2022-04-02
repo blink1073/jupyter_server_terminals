@@ -48,12 +48,12 @@ jobs:
         uses: actions/checkout@v2
       - name: Base Setup
         uses: jupyterlab/maintainer-tools/.github/actions/base-setup@v1
-      - name: Point at Jupyter Server branch with terminals removed.
-        run: |
-          pip install -U git+https://github.com/Zsailer/jupyter_server.git@jupyter_server_terminals
       - name: Install the Python dependencies
         run: |
           pip install -e ".[test]" codecov
+      - name: Point at Jupyter Server branch with terminals removed.
+        run: |
+          pip install -U git+https://github.com/Zsailer/jupyter_server.git@jupyter_server_terminals
       - name: List installed packages
         run: |
           pip freeze
