@@ -26,7 +26,7 @@ message_template = "Bump to {new_version}"
 tag_template = "v{new_version}"
 
 [[tool.tbump.file]]
-src = "jupyter_server_terminals/__init__.py"
+src = "jupyter_server_terminals/_version.py"
 version_template = '({major}, {minor}, {patch}, "{channel}", "{release}")'
 
 [[tool.tbump.file]]

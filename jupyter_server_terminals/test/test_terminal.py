@@ -118,7 +118,13 @@ async def test_terminal_create_with_cwd(
     data = json.loads(resp.body.decode())
     term_name = data["name"]
 
-    ws = await jp_ws_fetch("terminals", "websocket", term_name)
+    while True:
+        try:
+            ws = await jp_ws_fetch("terminals", "websocket", term_name)
+            break
+        except HTTPClientError as e:
+            if e.code != 404:
+                raise
 
     ws.write_message(json.dumps(["stdin", "pwd\r\n"]))
 
