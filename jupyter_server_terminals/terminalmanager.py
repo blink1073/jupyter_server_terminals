@@ -22,7 +22,7 @@ except ModuleNotFoundError:
 
 
 class TerminalManager(LoggingConfigurable, terminado.NamedTermManager):
-    """  """
+    """ """
 
     _culler_callback = None
 
@@ -105,7 +105,7 @@ class TerminalManager(LoggingConfigurable, terminado.NamedTermManager):
     def _check_terminal(self, name):
         """Check a that terminal 'name' exists and raise 404 if not."""
         if name not in self.terminals:
-            raise web.HTTPError(404, u"Terminal not found: %s" % name)
+            raise web.HTTPError(404, "Terminal not found: %s" % name)
 
     def _initialize_culler(self):
         """Start culler if 'cull_inactive_timeout' is greater than zero.
