@@ -70,6 +70,8 @@ async def test_terminal_create(jp_fetch, jp_cleanup_subprocesses):
     data = json.loads(resp_list.body.decode())
 
     assert len(data) == 1
+    del data[0]["last_activity"]
+    del term["last_activity"]
     assert data[0] == term
     await jp_cleanup_subprocesses()
 
