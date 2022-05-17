@@ -16,7 +16,7 @@ import os.path as osp
 import shutil
 import sys
 
-from pkg_resources import parse_version
+from packaging.version import parse as parse_version
 
 HERE = osp.abspath(osp.dirname(__file__))
 
@@ -95,10 +95,10 @@ github_project_url = "https://github.com/jupyter/jupyter_server_terminals"
 # |version| and |release|, also used in various other places throughout the
 # built documents.
 #
-__version__ = "0.2.1"
+__version__ = "0.3.0"
 # The short X.Y version.
 version_parsed = parse_version(__version__)
-version = f"{version_parsed.major}.{version_parsed.minor}"
+version = f"{version_parsed.major}.{version_parsed.minor}"  # type:ignore[union-attr]
 
 # The full version, including alpha/beta/rc tags.
 release = __version__
@@ -268,7 +268,7 @@ htmlhelp_basename = "JupyterServerTerminalsdoc"
 
 # -- Options for LaTeX output ---------------------------------------------
 
-latex_elements = {}
+# latex_elements = {}
 
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title,
