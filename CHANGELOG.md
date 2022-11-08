@@ -4,6 +4,26 @@ All notable changes to this project will be documented in this file.
 
 <!-- <START NEW CHANGELOG ENTRY> -->
 
+## 0.3.2
+
+([Full Changelog](https://github.com/jupyter-server/jupyter_server_terminals/compare/v0.3.1...574e1018b7d924f09c1ca45389182f1fd314caee))
+
+### Maintenance and upkeep improvements
+
+- Use ensure_async function [#54](https://github.com/jupyter-server/jupyter_server_terminals/pull/54) ([@blink1073](https://github.com/blink1073))
+- Maintenance cleanup [#51](https://github.com/jupyter-server/jupyter_server_terminals/pull/51) ([@blink1073](https://github.com/blink1073))
+- Maintenance cleanup [#50](https://github.com/jupyter-server/jupyter_server_terminals/pull/50) ([@blink1073](https://github.com/blink1073))
+- Ignore warnings in prerelease test [#47](https://github.com/jupyter-server/jupyter_server_terminals/pull/47) ([@blink1073](https://github.com/blink1073))
+- Clean up pyproject and ci [#45](https://github.com/jupyter-server/jupyter_server_terminals/pull/45) ([@blink1073](https://github.com/blink1073))
+
+### Contributors to this release
+
+([GitHub contributors page for this release](https://github.com/jupyter-server/jupyter_server_terminals/graphs/contributors?from=2022-09-08&to=2022-10-31&type=c))
+
+[@blink1073](https://github.com/search?q=repo%3Ajupyter-server%2Fjupyter_server_terminals+involves%3Ablink1073+updated%3A2022-09-08..2022-10-31&type=Issues) | [@codecov-commenter](https://github.com/search?q=repo%3Ajupyter-server%2Fjupyter_server_terminals+involves%3Acodecov-commenter+updated%3A2022-09-08..2022-10-31&type=Issues) | [@pre-commit-ci](https://github.com/search?q=repo%3Ajupyter-server%2Fjupyter_server_terminals+involves%3Apre-commit-ci+updated%3A2022-09-08..2022-10-31&type=Issues)
+
+<!-- <END NEW CHANGELOG ENTRY> -->
+
 ## 0.3.1
 
 ([Full Changelog](https://github.com/jupyter-server/jupyter_server_terminals/compare/v0.3.0...6d8b60bc758adc8656ff530a600fb7f57a34259e))
@@ -14,29 +34,27 @@ All notable changes to this project will be documented in this file.
 
 ### Maintenance and upkeep improvements
 
-- [pre-commit.ci] pre-commit autoupdate [#41](https://github.com/jupyter-server/jupyter_server_terminals/pull/41) ([@pre-commit-ci](https://github.com/pre-commit-ci))
-- [pre-commit.ci] pre-commit autoupdate [#40](https://github.com/jupyter-server/jupyter_server_terminals/pull/40) ([@pre-commit-ci](https://github.com/pre-commit-ci))
-- [pre-commit.ci] pre-commit autoupdate [#39](https://github.com/jupyter-server/jupyter_server_terminals/pull/39) ([@pre-commit-ci](https://github.com/pre-commit-ci))
+- \[pre-commit.ci\] pre-commit autoupdate [#41](https://github.com/jupyter-server/jupyter_server_terminals/pull/41) ([@pre-commit-ci](https://github.com/pre-commit-ci))
+- \[pre-commit.ci\] pre-commit autoupdate [#40](https://github.com/jupyter-server/jupyter_server_terminals/pull/40) ([@pre-commit-ci](https://github.com/pre-commit-ci))
+- \[pre-commit.ci\] pre-commit autoupdate [#39](https://github.com/jupyter-server/jupyter_server_terminals/pull/39) ([@pre-commit-ci](https://github.com/pre-commit-ci))
 - Fix flake8 v5 compat [#38](https://github.com/jupyter-server/jupyter_server_terminals/pull/38) ([@blink1073](https://github.com/blink1073))
-- [pre-commit.ci] pre-commit autoupdate [#37](https://github.com/jupyter-server/jupyter_server_terminals/pull/37) ([@pre-commit-ci](https://github.com/pre-commit-ci))
-- [pre-commit.ci] pre-commit autoupdate [#36](https://github.com/jupyter-server/jupyter_server_terminals/pull/36) ([@pre-commit-ci](https://github.com/pre-commit-ci))
-- [pre-commit.ci] pre-commit autoupdate [#35](https://github.com/jupyter-server/jupyter_server_terminals/pull/35) ([@pre-commit-ci](https://github.com/pre-commit-ci))
-- [pre-commit.ci] pre-commit autoupdate [#34](https://github.com/jupyter-server/jupyter_server_terminals/pull/34) ([@pre-commit-ci](https://github.com/pre-commit-ci))
+- \[pre-commit.ci\] pre-commit autoupdate [#37](https://github.com/jupyter-server/jupyter_server_terminals/pull/37) ([@pre-commit-ci](https://github.com/pre-commit-ci))
+- \[pre-commit.ci\] pre-commit autoupdate [#36](https://github.com/jupyter-server/jupyter_server_terminals/pull/36) ([@pre-commit-ci](https://github.com/pre-commit-ci))
+- \[pre-commit.ci\] pre-commit autoupdate [#35](https://github.com/jupyter-server/jupyter_server_terminals/pull/35) ([@pre-commit-ci](https://github.com/pre-commit-ci))
+- \[pre-commit.ci\] pre-commit autoupdate [#34](https://github.com/jupyter-server/jupyter_server_terminals/pull/34) ([@pre-commit-ci](https://github.com/pre-commit-ci))
 - Suppress tornado 6.2 beta warnings [#33](https://github.com/jupyter-server/jupyter_server_terminals/pull/33) ([@blink1073](https://github.com/blink1073))
-- [pre-commit.ci] pre-commit autoupdate [#32](https://github.com/jupyter-server/jupyter_server_terminals/pull/32) ([@pre-commit-ci](https://github.com/pre-commit-ci))
-- [pre-commit.ci] pre-commit autoupdate [#31](https://github.com/jupyter-server/jupyter_server_terminals/pull/31) ([@pre-commit-ci](https://github.com/pre-commit-ci))
-- [pre-commit.ci] pre-commit autoupdate [#30](https://github.com/jupyter-server/jupyter_server_terminals/pull/30) ([@pre-commit-ci](https://github.com/pre-commit-ci))
+- \[pre-commit.ci\] pre-commit autoupdate [#32](https://github.com/jupyter-server/jupyter_server_terminals/pull/32) ([@pre-commit-ci](https://github.com/pre-commit-ci))
+- \[pre-commit.ci\] pre-commit autoupdate [#31](https://github.com/jupyter-server/jupyter_server_terminals/pull/31) ([@pre-commit-ci](https://github.com/pre-commit-ci))
+- \[pre-commit.ci\] pre-commit autoupdate [#30](https://github.com/jupyter-server/jupyter_server_terminals/pull/30) ([@pre-commit-ci](https://github.com/pre-commit-ci))
 - Use hatch backend [#29](https://github.com/jupyter-server/jupyter_server_terminals/pull/29) ([@blink1073](https://github.com/blink1073))
-- [pre-commit.ci] pre-commit autoupdate [#28](https://github.com/jupyter-server/jupyter_server_terminals/pull/28) ([@pre-commit-ci](https://github.com/pre-commit-ci))
-- [pre-commit.ci] pre-commit autoupdate [#27](https://github.com/jupyter-server/jupyter_server_terminals/pull/27) ([@pre-commit-ci](https://github.com/pre-commit-ci))
+- \[pre-commit.ci\] pre-commit autoupdate [#28](https://github.com/jupyter-server/jupyter_server_terminals/pull/28) ([@pre-commit-ci](https://github.com/pre-commit-ci))
+- \[pre-commit.ci\] pre-commit autoupdate [#27](https://github.com/jupyter-server/jupyter_server_terminals/pull/27) ([@pre-commit-ci](https://github.com/pre-commit-ci))
 
 ### Contributors to this release
 
 ([GitHub contributors page for this release](https://github.com/jupyter-server/jupyter_server_terminals/graphs/contributors?from=2022-05-03&to=2022-09-08&type=c))
 
 [@blink1073](https://github.com/search?q=repo%3Ajupyter-server%2Fjupyter_server_terminals+involves%3Ablink1073+updated%3A2022-05-03..2022-09-08&type=Issues) | [@codecov-commenter](https://github.com/search?q=repo%3Ajupyter-server%2Fjupyter_server_terminals+involves%3Acodecov-commenter+updated%3A2022-05-03..2022-09-08&type=Issues) | [@krassowski](https://github.com/search?q=repo%3Ajupyter-server%2Fjupyter_server_terminals+involves%3Akrassowski+updated%3A2022-05-03..2022-09-08&type=Issues) | [@pre-commit-ci](https://github.com/search?q=repo%3Ajupyter-server%2Fjupyter_server_terminals+involves%3Apre-commit-ci+updated%3A2022-05-03..2022-09-08&type=Issues) | [@welcome](https://github.com/search?q=repo%3Ajupyter-server%2Fjupyter_server_terminals+involves%3Awelcome+updated%3A2022-05-03..2022-09-08&type=Issues)
-
-<!-- <END NEW CHANGELOG ENTRY> -->
 
 ## 0.3.0
 
@@ -47,12 +65,12 @@ All notable changes to this project will be documented in this file.
 - Use alpha release of server 2.0 [#25](https://github.com/jupyter-server/jupyter_server_terminals/pull/25) ([@blink1073](https://github.com/blink1073))
 - Switch to flit build backend [#24](https://github.com/jupyter-server/jupyter_server_terminals/pull/24) ([@blink1073](https://github.com/blink1073))
 - Allow bot PRs to be auto-labeled [#23](https://github.com/jupyter-server/jupyter_server_terminals/pull/23) ([@blink1073](https://github.com/blink1073))
-- [pre-commit.ci] pre-commit autoupdate [#22](https://github.com/jupyter-server/jupyter_server_terminals/pull/22) ([@pre-commit-ci](https://github.com/pre-commit-ci))
-- [pre-commit.ci] pre-commit autoupdate [#21](https://github.com/jupyter-server/jupyter_server_terminals/pull/21) ([@pre-commit-ci](https://github.com/pre-commit-ci))
+- \[pre-commit.ci\] pre-commit autoupdate [#22](https://github.com/jupyter-server/jupyter_server_terminals/pull/22) ([@pre-commit-ci](https://github.com/pre-commit-ci))
+- \[pre-commit.ci\] pre-commit autoupdate [#21](https://github.com/jupyter-server/jupyter_server_terminals/pull/21) ([@pre-commit-ci](https://github.com/pre-commit-ci))
 - Add mypy check [#20](https://github.com/jupyter-server/jupyter_server_terminals/pull/20) ([@blink1073](https://github.com/blink1073))
-- [pre-commit.ci] pre-commit autoupdate [#19](https://github.com/jupyter-server/jupyter_server_terminals/pull/19) ([@pre-commit-ci](https://github.com/pre-commit-ci))
+- \[pre-commit.ci\] pre-commit autoupdate [#19](https://github.com/jupyter-server/jupyter_server_terminals/pull/19) ([@pre-commit-ci](https://github.com/pre-commit-ci))
 - Clean up pre-commit [#18](https://github.com/jupyter-server/jupyter_server_terminals/pull/18) ([@blink1073](https://github.com/blink1073))
-- [pre-commit.ci] pre-commit autoupdate [#17](https://github.com/jupyter-server/jupyter_server_terminals/pull/17) ([@pre-commit-ci](https://github.com/pre-commit-ci))
+- \[pre-commit.ci\] pre-commit autoupdate [#17](https://github.com/jupyter-server/jupyter_server_terminals/pull/17) ([@pre-commit-ci](https://github.com/pre-commit-ci))
 
 ### Contributors to this release
 

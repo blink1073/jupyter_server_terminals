@@ -4,6 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "jupyter_server_terminals"
+readme = "README.md"
 dynamic = ["version"]
 license = { file = "LICENSE" }
 description = "A Jupyter Server Extension Providing Terminals."
@@ -29,18 +30,14 @@ dependencies = [
 name = "Jupyter Development Team"
 email = "jupyter@googlegroups.com"
 
-[project.readme]
-file = "README.md"
-content-type = "text/markdown"
-
 [project.urls]
 Homepage = "https://jupyter.org"
 
 [project.optional-dependencies]
 test = [
   "coverage",
-  "jupyter_server[test]>=2.0.0a0",
-  "pytest>=6.0",
+  "jupyter_server[test]>=2.0.0rc0",
+  "pytest>=7.0",
   "pytest_tornasync",
   "pytest-cov",
   "pytest-timeout",
@@ -86,13 +83,23 @@ warn_redundant_casts = true
 warn_return_any = true
 warn_unused_ignores = true
 
-[[tool.mypy.overrides]]
-module = [
-  "traitlets.*",
-  "jupyter_server.*",
-  "terminado"
+[tool.flake8]
+ignore = "E501, W503, E402"
+builtins = "c, get_config"
+exclude = [
+    ".cache",
+    ".github",
+    "docs",
+    "setup.py",
 ]
-ignore_missing_imports = true
-
-[tool.jupyter-releaser]
-skip = ["check-links"]
+enable-extensions = "G"
+extend-ignore = [
+    "G001", "G002", "G004", "G200", "G201", "G202",
+    # black adds spaces around ':'
+    "E203",
+]
+per-file-ignores = [
+    # B011: Do not call assert False since python -O removes these calls
+    # F841 local variable 'foo' is assigned to but never used
+    "tests/*: B011", "F841",
+]
