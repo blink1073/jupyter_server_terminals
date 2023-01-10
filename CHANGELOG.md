@@ -4,6 +4,61 @@ All notable changes to this project will be documented in this file.
 
 <!-- <START NEW CHANGELOG ENTRY> -->
 
+## 0.4.4
+
+([Full Changelog](https://github.com/jupyter-server/jupyter_server_terminals/compare/v0.4.3...6791413888e45d2aeab5d9d154c98ca9dbd828d8))
+
+### Maintenance and upkeep improvements
+
+- Add typing file [#74](https://github.com/jupyter-server/jupyter_server_terminals/pull/74) ([@blink1073](https://github.com/blink1073))
+- Add spelling and docstring enforcement [#72](https://github.com/jupyter-server/jupyter_server_terminals/pull/72) ([@blink1073](https://github.com/blink1073))
+
+### Contributors to this release
+
+([GitHub contributors page for this release](https://github.com/jupyter-server/jupyter_server_terminals/graphs/contributors?from=2022-12-19&to=2023-01-09&type=c))
+
+[@blink1073](https://github.com/search?q=repo%3Ajupyter-server%2Fjupyter_server_terminals+involves%3Ablink1073+updated%3A2022-12-19..2023-01-09&type=Issues) | [@codecov](https://github.com/search?q=repo%3Ajupyter-server%2Fjupyter_server_terminals+involves%3Acodecov+updated%3A2022-12-19..2023-01-09&type=Issues) | [@pre-commit-ci](https://github.com/search?q=repo%3Ajupyter-server%2Fjupyter_server_terminals+involves%3Apre-commit-ci+updated%3A2022-12-19..2023-01-09&type=Issues)
+
+<!-- <END NEW CHANGELOG ENTRY> -->
+
+## 0.4.3
+
+([Full Changelog](https://github.com/jupyter-server/jupyter_server_terminals/compare/v0.4.2...b1f2a99b062192e809d770c517ce02988d32d121))
+
+### Bugs fixed
+
+- Fix Server Version Handling and Clean up CI [#71](https://github.com/jupyter-server/jupyter_server_terminals/pull/71) ([@blink1073](https://github.com/blink1073))
+
+### Maintenance and upkeep improvements
+
+- Update mistune requirement from \<2.0 to \<3.0 [#70](https://github.com/jupyter-server/jupyter_server_terminals/pull/70) ([@dependabot](https://github.com/dependabot))
+- Adopt ruff and address lint [#69](https://github.com/jupyter-server/jupyter_server_terminals/pull/69) ([@blink1073](https://github.com/blink1073))
+
+### Contributors to this release
+
+([GitHub contributors page for this release](https://github.com/jupyter-server/jupyter_server_terminals/graphs/contributors?from=2022-12-01&to=2022-12-19&type=c))
+
+[@blink1073](https://github.com/search?q=repo%3Ajupyter-server%2Fjupyter_server_terminals+involves%3Ablink1073+updated%3A2022-12-01..2022-12-19&type=Issues) | [@codecov](https://github.com/search?q=repo%3Ajupyter-server%2Fjupyter_server_terminals+involves%3Acodecov+updated%3A2022-12-01..2022-12-19&type=Issues) | [@dependabot](https://github.com/search?q=repo%3Ajupyter-server%2Fjupyter_server_terminals+involves%3Adependabot+updated%3A2022-12-01..2022-12-19&type=Issues) | [@pre-commit-ci](https://github.com/search?q=repo%3Ajupyter-server%2Fjupyter_server_terminals+involves%3Apre-commit-ci+updated%3A2022-12-01..2022-12-19&type=Issues)
+
+## 0.4.2
+
+([Full Changelog](https://github.com/jupyter-server/jupyter_server_terminals/compare/v0.4.1...744451298913d2c2d81698f94d16dfb595df897f))
+
+### Maintenance and upkeep improvements
+
+- Use pytest-jupyter [#67](https://github.com/jupyter-server/jupyter_server_terminals/pull/67) ([@blink1073](https://github.com/blink1073))
+- Fixup workflows and add badges [#64](https://github.com/jupyter-server/jupyter_server_terminals/pull/64) ([@blink1073](https://github.com/blink1073))
+
+### Documentation improvements
+
+- Fixup workflows and add badges [#64](https://github.com/jupyter-server/jupyter_server_terminals/pull/64) ([@blink1073](https://github.com/blink1073))
+
+### Contributors to this release
+
+([GitHub contributors page for this release](https://github.com/jupyter-server/jupyter_server_terminals/graphs/contributors?from=2022-11-21&to=2022-12-01&type=c))
+
+[@blink1073](https://github.com/search?q=repo%3Ajupyter-server%2Fjupyter_server_terminals+involves%3Ablink1073+updated%3A2022-11-21..2022-12-01&type=Issues) | [@codecov](https://github.com/search?q=repo%3Ajupyter-server%2Fjupyter_server_terminals+involves%3Acodecov+updated%3A2022-11-21..2022-12-01&type=Issues) | [@pre-commit-ci](https://github.com/search?q=repo%3Ajupyter-server%2Fjupyter_server_terminals+involves%3Apre-commit-ci+updated%3A2022-11-21..2022-12-01&type=Issues)
+
 ## 0.4.1
 
 ([Full Changelog](https://github.com/jupyter-server/jupyter_server_terminals/compare/v0.4.0...37da434a24475daf674e1711edc53af52dd6957d))
@@ -18,8 +73,6 @@ All notable changes to this project will be documented in this file.
 ([GitHub contributors page for this release](https://github.com/jupyter-server/jupyter_server_terminals/graphs/contributors?from=2022-11-11&to=2022-11-21&type=c))
 
 [@blink1073](https://github.com/search?q=repo%3Ajupyter-server%2Fjupyter_server_terminals+involves%3Ablink1073+updated%3A2022-11-11..2022-11-21&type=Issues) | [@codecov](https://github.com/search?q=repo%3Ajupyter-server%2Fjupyter_server_terminals+involves%3Acodecov+updated%3A2022-11-11..2022-11-21&type=Issues) | [@pre-commit-ci](https://github.com/search?q=repo%3Ajupyter-server%2Fjupyter_server_terminals+involves%3Apre-commit-ci+updated%3A2022-11-11..2022-11-21&type=Issues) | [@Zsailer](https://github.com/search?q=repo%3Ajupyter-server%2Fjupyter_server_terminals+involves%3AZsailer+updated%3A2022-11-11..2022-11-21&type=Issues)
-
-<!-- <END NEW CHANGELOG ENTRY> -->
 
 ## 0.4.0
 
@@ -160,10 +213,10 @@ All notable changes to this project will be documented in this file.
 
 ### Documentation improvements
 
-- Fix links in readme [#3](https://github.com/jupyter-server/jupyter_server_terminals/pull/3) ([@jweill-aws](https://github.com/jweill-aws))
+- Fix links in readme [#3](https://github.com/jupyter-server/jupyter_server_terminals/pull/3) ([@jasonweill](https://github.com/jasonweill))
 
 ### Contributors to this release
 
 ([GitHub contributors page for this release](https://github.com/jupyter-server/jupyter_server_terminals/graphs/contributors?from=2021-12-26&to=2022-04-02&type=c))
 
-[@blink1073](https://github.com/search?q=repo%3Ajupyter-server%2Fjupyter_server_terminals+involves%3Ablink1073+updated%3A2021-12-26..2022-04-02&type=Issues) | [@jweill-aws](https://github.com/search?q=repo%3Ajupyter-server%2Fjupyter_server_terminals+involves%3Ajweill-aws+updated%3A2021-12-26..2022-04-02&type=Issues) | [@welcome](https://github.com/search?q=repo%3Ajupyter-server%2Fjupyter_server_terminals+involves%3Awelcome+updated%3A2021-12-26..2022-04-02&type=Issues) | [@Wh1isper](https://github.com/search?q=repo%3Ajupyter-server%2Fjupyter_server_terminals+involves%3AWh1isper+updated%3A2021-12-26..2022-04-02&type=Issues) | [@Zsailer](https://github.com/search?q=repo%3Ajupyter-server%2Fjupyter_server_terminals+involves%3AZsailer+updated%3A2021-12-26..2022-04-02&type=Issues)
+[@blink1073](https://github.com/search?q=repo%3Ajupyter-server%2Fjupyter_server_terminals+involves%3Ablink1073+updated%3A2021-12-26..2022-04-02&type=Issues) | [@jasonweills](https://github.com/search?q=repo%3Ajupyter-server%2Fjupyter_server_terminals+involves%3Ajasonweill+updated%3A2021-12-26..2022-04-02&type=Issues) | [@welcome](https://github.com/search?q=repo%3Ajupyter-server%2Fjupyter_server_terminals+involves%3Awelcome+updated%3A2021-12-26..2022-04-02&type=Issues) | [@Wh1isper](https://github.com/search?q=repo%3Ajupyter-server%2Fjupyter_server_terminals+involves%3AWh1isper+updated%3A2021-12-26..2022-04-02&type=Issues) | [@Zsailer](https://github.com/search?q=repo%3Ajupyter-server%2Fjupyter_server_terminals+involves%3AZsailer+updated%3A2021-12-26..2022-04-02&type=Issues)
