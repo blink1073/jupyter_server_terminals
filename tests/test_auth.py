@@ -11,7 +11,6 @@ from traitlets.config.loader import Config
 
 
 class AuthorizerforTesting(Authorizer):
-
     # Set these class attributes from within a test
     # to verify that they match the arguments passed
     # by the REST API.
@@ -30,10 +29,7 @@ class AuthorizerforTesting(Authorizer):
 
     def is_authorized(self, handler, user, action, resource):
         # Parse Request
-        if isinstance(handler, WebSocketHandler):
-            method = "WEBSOCKET"
-        else:
-            method = handler.request.method
+        method = "WEBSOCKET" if isinstance(handler, WebSocketHandler) else handler.request.method
         url = self.normalize_url(handler.request.path)
 
         # Map request parts to expected action and resource.
@@ -71,10 +67,7 @@ def send_request(jp_fetch, jp_ws_fetch):
     """Send to Jupyter Server and return response code."""
 
     async def _(url, **fetch_kwargs):
-        if url.endswith("channels") or "/websocket/" in url:
-            fetch = jp_ws_fetch
-        else:
-            fetch = jp_fetch
+        fetch = jp_ws_fetch if url.endswith("channels") or "/websocket/" in url else jp_fetch
 
         try:
             r = await fetch(url, **fetch_kwargs, allow_nonstandard_methods=True)
@@ -118,7 +111,7 @@ HTTP_REQUESTS_PARAMETRIZED = [(req["method"], req["url"], req.get("body")) for r
 
 @pytest.mark.parametrize("method, url, body", HTTP_REQUESTS_PARAMETRIZED)
 @pytest.mark.parametrize("allowed", (True, False))
-async def test_authorized_requests(
+async def test_authorized_requests(  # noqa
     request,
     io_loop,
     send_request,
