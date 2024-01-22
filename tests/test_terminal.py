@@ -3,13 +3,14 @@ import json
 import os
 import shutil
 import sys
+from pathlib import Path
 
 import pytest
 from tornado.httpclient import HTTPClientError
 from traitlets.config.loader import Config
 
 
-@pytest.fixture
+@pytest.fixture()
 def terminal_path(tmp_path):
     subdir = tmp_path.joinpath("terminal_path")
     subdir.mkdir()
@@ -19,7 +20,7 @@ def terminal_path(tmp_path):
     shutil.rmtree(str(subdir), ignore_errors=True)
 
 
-@pytest.fixture
+@pytest.fixture()
 def terminal_root_dir(jp_root_dir):
     subdir = jp_root_dir.joinpath("terminal_path")
     subdir.mkdir()
@@ -36,7 +37,7 @@ if os.name == 'nt':
     CULL_INTERVAL = 20
 
 
-@pytest.fixture
+@pytest.fixture()
 def jp_server_config():
     return Config(
         {
@@ -151,7 +152,7 @@ async def test_terminal_create_with_cwd(jp_fetch, jp_ws_fetch, terminal_path):
 
     ws.close()
 
-    assert os.path.basename(terminal_path) in message_stdout
+    assert Path(terminal_path).name in message_stdout
 
 
 async def test_terminal_create_with_relative_cwd(
@@ -198,7 +199,7 @@ async def test_terminal_create_with_relative_cwd(
 
 
 async def test_terminal_create_with_bad_cwd(jp_fetch, jp_ws_fetch):
-    non_existing_path = "/tmp/path/to/nowhere"  # noqa
+    non_existing_path = "/tmp/path/to/nowhere"  # noqa: S108
     resp = await jp_fetch(
         "api",
         "terminals",
@@ -238,6 +239,12 @@ async def test_terminal_create_with_bad_cwd(jp_fetch, jp_ws_fetch):
     assert non_existing_path not in message_stdout
 
 
+async def test_app_config(jp_configurable_serverapp):
+    assert jp_configurable_serverapp().terminals_enabled is True
+    assert jp_configurable_serverapp().web_app.settings["terminals_available"] is True
+    assert jp_configurable_serverapp().web_app.settings["terminal_manager"]
+
+
 async def test_culling_config(jp_configurable_serverapp):
     terminal_mgr_config = jp_configurable_serverapp().config.ServerApp.TerminalManager
     assert terminal_mgr_config.cull_inactive_timeout == CULL_TIMEOUT
@@ -271,7 +278,7 @@ async def test_culling(jp_fetch):
                 allow_nonstandard_methods=True,
             )
         except HTTPClientError as e:
-            assert e.code == 404
+            assert e.code == 404  # noqa: PT017
             culled = True
             break
         else:

@@ -36,6 +36,9 @@ class TerminalsExtensionApp(ExtensionApp):
 
     def initialize_settings(self) -> None:
         """Initialize settings."""
+        if not self.serverapp or not self.serverapp.terminals_enabled:
+            self.settings.update({"terminals_available": False})
+            return
         self.initialize_configurables()
         self.settings.update(
             {"terminals_available": True, "terminal_manager": self.terminal_manager}
@@ -71,6 +74,16 @@ class TerminalsExtensionApp(ExtensionApp):
 
     def initialize_handlers(self) -> None:
         """Initialize handlers."""
+        if not self.serverapp:
+            # Already set `terminals_available` as `False` in `initialize_settings`
+            return
+
+        if not self.serverapp.terminals_enabled:
+            # webapp settings for backwards compat (used by nbclassic), #12
+            self.serverapp.web_app.settings["terminals_available"] = self.settings[
+                "terminals_available"
+            ]
+            return
         self.handlers.append(
             (
                 r"/terminals/websocket/(\w+)",
@@ -107,7 +120,7 @@ class TerminalsExtensionApp(ExtensionApp):
         terminal_msg = trans.ngettext(
             "Shutting down %d terminal", "Shutting down %d terminals", n_terminals
         )
-        self.log.info(terminal_msg % n_terminals)
+        self.log.info("%s %% %s", terminal_msg, n_terminals)
         await ensure_async(terminal_manager.terminate_all())  # type:ignore[arg-type]
 
     async def stop_extension(self) -> None:
